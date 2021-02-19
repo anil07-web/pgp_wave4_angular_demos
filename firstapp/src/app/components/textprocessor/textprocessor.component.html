@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-md-6 offset-md-3">
+      <!-- <input type="checkbox" #boldCheck (click)="ChangeStyle(boldCheck)"> Bold -->
+      <input type="checkbox" #boldCheck (click)="ChangeBold(boldCheck)"> Bold
+      <input type="checkbox" #italicCheck (click)="ChangeItalic(italicCheck)"> Italic
+      <input type="checkbox" #underlineCheck (click)="ChangeUnderline(underlineCheck)"> Underline
+      <input type="range" #fontSizeRange min="10" max="100" value="10" (change)="ChangeFontSize(fontSizeRange)">
+      <input type="color" #colorInput (input)="ChangeColor(colorInput)">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <!-- <p class="text-center" [style.fontWeight]="isBold?'bold':'normal'">Sample Text</p> -->
+      <p class="text-center" [ngStyle]="textStyle2" [ngClass]="textStyles">Sample Text</p>
+    </div>
+  </div>
+</div>
