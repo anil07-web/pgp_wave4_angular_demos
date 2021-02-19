@@ -1,0 +1,17 @@
+.SimpleStyle {
+  color: orange;
+  font-size: 20pt;
+  font-family: 'Comic sans ms';
+}
+
+.text-red {
+  color: red;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: bold;
+}

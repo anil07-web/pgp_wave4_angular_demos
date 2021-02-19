@@ -1,0 +1,30 @@
+<!-- String Interpolation -->
+<h2>Welcome {{username}}</h2>
+
+<!-- Property Binding -->
+<input type="text" [id]="Id">
+<input type="text" id="{{Id}}">
+<input type="text" [disabled]="isDisabled">
+
+<!-- Style Binding -->
+<h2 [style.color]="headingColor">StackRoute</h2>
+<h2 [style.color]="isError ? 'red': 'green'">StackRoute</h2>
+<h2 [style.textDecoration]="isError ? 'underline': 'none'">StackRoute</h2>
+<h2 [ngStyle]="myStyle">StackRoute</h2>
+
+<!-- Class Binding -->
+<h2 [class.SimpleStyle]="applyClass">Using Class Binding</h2>
+<h2 [ngClass]="applyClasses">Using Class Binding 2</h2>
+
+<!-- Event Binding -->
+<button (click)="Show($event)" class="btn btn-secondary">Submit</button>
+
+<!-- Two Way Binding -->
+<input type="text" [(ngModel)]="firstname">
+<h3>Welcome {{firstname}}</h3>
+
+<!-- Template Reference Variable -->
+<div>
+  <input #txt1 type="text">
+  <button (click)="ShowText(txt1.value)" class="btn btn-success btn-sm">Show Text</button>
+</div>
