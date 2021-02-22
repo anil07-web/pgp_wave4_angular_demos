@@ -1,0 +1,51 @@
+<div class="container">
+  <div>
+    <p>How are you feeling today ?</p>
+    <input (click)="CheckEmotion($event)" checked id="happy" type="radio" name="emotion"> Happy
+    <input (click)="CheckEmotion($event)" id="sad" type="radio" name="emotion"> Sad
+    <input (click)="CheckEmotion($event)" id="angry" type="radio" name="emotion"> Angry
+    <input (click)="CheckEmotion($event)" id="confused" type="radio" name="emotion"> Confused
+  </div>
+  <div [ngSwitch]="person.emotion">
+    <img *ngSwitchCase="'happy'" src="assets/images/smiley.png" alt="">
+    <img *ngSwitchCase="'angry'" src="assets/images/angry.png" alt="">
+    <img *ngSwitchCase="'sad'" src="assets/images/sad.png" alt="">
+    <img *ngSwitchCase="'confused'" src="assets/images/confused.png" alt="">
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let c of countries; let i=index; let o=odd">{{o}} {{i}} {{c}}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let c of countries;let o=even" [class.bg-warning]="o">
+          {{c}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ProductId</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products; let even=even" [class.bg-danger]="even">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.brand}}</td>
+            <td>{{p.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
