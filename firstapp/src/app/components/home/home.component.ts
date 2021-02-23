@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: ContactService) { }
+
   public hasError = false;
+  public username = 'john';
+  public num = 5;
+  public todayDate = new Date();
   public person = {
     emotion: 'happy'
   }
-  public countries = ['India','Australia','England','Russia','China'];
+  public countries = ['India', 'Australia', 'England', 'Russia', 'China'];
   public products = [
     {
       id: 1,

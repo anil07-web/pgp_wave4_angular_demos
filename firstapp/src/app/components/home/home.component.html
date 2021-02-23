@@ -1,4 +1,13 @@
 <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Welcome {{username|uppercase}}</h3>
+      <h3>Today's date is {{todayDate | date:'shortDate'}}</h3>
+      <h3>{{num|factorial}}</h3>
+      <h3>{{num|power:6}}</h3>
+    </div>
+  </div>
+
   <div>
     <p>How are you feeling today ?</p>
     <input (click)="CheckEmotion($event)" checked id="happy" type="radio" name="emotion"> Happy
@@ -42,7 +51,7 @@
             <td>{{p.id}}</td>
             <td>{{p.name}}</td>
             <td>{{p.brand}}</td>
-            <td>{{p.price}}</td>
+            <td>{{p.price|currency:'INR'}}</td>
           </tr>
         </tbody>
       </table>

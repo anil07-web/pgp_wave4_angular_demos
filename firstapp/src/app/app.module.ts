@@ -9,6 +9,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { TextprocessorComponent } from './components/textprocessor/textprocessor.component';
 import { HomeComponent } from './components/home/home.component';
+import { FactorialPipe } from './pipes/factorial.pipe';
+import { PowerPipe } from './pipes/power.pipe';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { HttpClientModule } from "@angular/common/http";
+import { ContactService } from './services/contact.service';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +23,19 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     DashboardComponent,
     TextprocessorComponent,
-    HomeComponent
+    HomeComponent,
+    FactorialPipe,
+    PowerPipe,
+    ContactsComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
