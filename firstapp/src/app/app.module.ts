@@ -15,6 +15,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ContactService } from './services/contact.service';
 import { MoviesComponent } from './components/movies/movies.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MoviesComponent } from './components/movies/movies.component';
     FactorialPipe,
     PowerPipe,
     ContactsComponent,
-    MoviesComponent
+    MoviesComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

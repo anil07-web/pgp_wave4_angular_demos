@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let p of posts">
+      <div class="card mt-3">
+        <img src="{{p.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <img src="{{p.owner.picture}}" width="100px" height="100px" style="border-radius: 50%;" alt="">
+          <h5 class="card-title">{{p.owner.title|uppercase}} {{p.owner.firstName}} {{p.owner.lastName}}</h5>
+          <p class="card-text">{{p.owner.email}}</p>
+          <p class="card-text"><i class="fas fa-thumbs-up"></i> {{p.likes}}</p>
+          <p>
+            <span class="badge rounded-pill bg-danger" *ngFor="let t of p.tags">{{t}}</span>
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

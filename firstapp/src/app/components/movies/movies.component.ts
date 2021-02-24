@@ -16,6 +16,7 @@ export class MoviesComponent implements OnInit {
 
   SearchMovie(moviename) {
     this.service.GetMovie(moviename.value).subscribe(data => {
+      console.log(data);
       this.movie = data;
     });
   }
