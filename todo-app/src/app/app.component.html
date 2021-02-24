@@ -1,0 +1,30 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="bg-dark rounded-3 text-light mb-3 text-center py-3 fs-3">
+        <i class="fas fa-check-double"></i> ToDo List
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="input-group mb-3">
+        <input #txtItem type="text" class="form-control" placeholder="Enter Item Text">
+        <button class="btn btn-secondary" (click)="addItem(txtItem.value)"><i class="fas fa-plus-circle"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of todoItems">
+          <input type="checkbox" [checked]="item.iscompleted" class="form-check-input" (click)="updateItem(item)">
+          <span [ngStyle]="{'text-decoration':(item.iscompleted?'line-through':'none')}">
+            {{item.todoitem}} <i (click)="deleteItem(item.id)"
+              class="fas fa-minus-circle text-danger fa-lg float-end"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

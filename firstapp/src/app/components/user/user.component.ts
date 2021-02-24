@@ -14,6 +14,8 @@ export class UserComponent implements OnInit {
     this.service.GetUsers().subscribe((postData: any) => {
       console.log(postData.data);
       this.posts = postData.data;
+    }, (error) => {
+      console.log(error);
     });
   }
 

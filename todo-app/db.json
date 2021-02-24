@@ -1,0 +1,24 @@
+{
+  "todoItems": [
+    {
+      "todoitem": "Buy Groceries",
+      "iscompleted": true,
+      "id": 1
+    },
+    {
+      "todoitem": "Meeting @ 9 AM",
+      "iscompleted": false,
+      "id": 2
+    },
+    {
+      "todoitem": "Pay Electricity Bill",
+      "iscompleted": false,
+      "id": 3
+    },
+    {
+      "todoitem": "Pay Telephone Bill",
+      "iscompleted": false,
+      "id": 4
+    }
+  ]
+}
