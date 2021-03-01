@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <form #contactform="ngForm" (ngSubmit)="onSubmit(contactform)">
+        <div class="mt-2">
+          <input type="text" #firstname="ngModel" name="firstname" required pattern="[a-zA-Z]{1,10}" class="form-control" [(ngModel)]="contact.firstname" placeholder="First Name">
+          <div class="text-danger" *ngIf="firstname.dirty && firstname.errors?.required">
+            First Name is required
+          </div>
+          <div class="text-danger" *ngIf="firstname.dirty && firstname.errors?.pattern">
+            Only alphabets are allowed in First Name
+          </div>
+        </div>
+        <div class="mt-2">
+          <input type="text" #lastname="ngModel" name="lastname" required class="form-control" [(ngModel)]="contact.lastname" placeholder="Last Name">
+          <div class="text-danger" *ngIf="lastname.dirty && lastname.errors?.required">
+            Last Name is required
+          </div>
+        </div>
+        <div class="mt-2">
+          <input type="text" #email="ngModel" name="email" required class="form-control" [(ngModel)]="contact.email" placeholder="Email">
+          <div class="text-danger" *ngIf="email.dirty && email.errors?.required">
+            Email is required
+          </div>
+        </div>
+        <div class="mt-2">
+          <input type="text" #city="ngModel" name="city" required class="form-control" [(ngModel)]="contact.city" placeholder="City">
+          <div class="text-danger" *ngIf="city.dirty && city.errors?.required">
+            City is required
+          </div>
+        </div>
+        <div class="mt-2">
+          <input type="text" #phone="ngModel" name="phone" required class="form-control" [(ngModel)]="contact.phone" placeholder="Phone">
+          <div class="text-danger" *ngIf="phone.dirty && phone.errors?.required">
+            Phone is required
+          </div>
+        </div>
+        <div class="mt-2">
+          <button class="btn btn-secondary">Add Contact</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

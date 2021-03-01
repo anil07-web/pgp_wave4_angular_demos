@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ContactService } from './services/contact.service';
 import { MoviesComponent } from './components/movies/movies.component';
 import { UserComponent } from './components/user/user.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UserComponent } from './components/user/user.component';
     PowerPipe,
     ContactsComponent,
     MoviesComponent,
-    UserComponent
+    UserComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

@@ -8,14 +8,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" routerLink="/contact/dashboard">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/movies">Movies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" routerLink="/text">TextProcessor</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user">User</a>
+        </li>
+
       </ul>
       <ul class="navbar-nav" *ngIf="!isLoggedIn">
         <li class="nav-item">
