@@ -10,7 +10,8 @@ import { AddcontactComponent } from './components/addcontact/addcontact.componen
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-
+import { HttpClientModule } from "@angular/common/http";
+import { UpdatecontactComponent } from './components/updatecontact/updatecontact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +20,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     LoginComponent,
     AddcontactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UpdatecontactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,16 @@
-<p>contact works!</p>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let c of contacts">
+      <div class="card">
+        <div class="card-body">
+          <span class="text-danger float-end" (click)="onDelete(c.id)"><i class="far fa-trash-alt fa-lg"></i></span>
+          <a class="float-end px-2" routerLink="/updatecontact/{{c.id}}"><i class="fas fa-pencil-alt fa-lg"></i></a>
+          <h5 class="card-title">{{c.firstname}} {{c.lastname}}</h5>
+          <p class="card-text">{{c.email}}</p>
+          <p class="card-text">{{c.city}}</p>
+          <p class="card-text">{{c.phone}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

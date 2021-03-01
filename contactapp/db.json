@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "firstname": "Steve",
+      "lastname": "Jobs",
+      "email": "Steve@live.com",
+      "city": "Kolkata",
+      "phone": "298563289",
+      "id": 1
+    },
+    {
+      "firstname": "Tony",
+      "lastname": "Stark",
+      "email": "tony@gmail.com",
+      "city": "New Delhi",
+      "phone": "9286359823",
+      "id": 2
+    }
+  ]
+}
