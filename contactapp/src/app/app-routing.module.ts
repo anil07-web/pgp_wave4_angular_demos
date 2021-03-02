@@ -5,15 +5,16 @@ import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UpdatecontactComponent } from './components/updatecontact/updatecontact.component';
+import { UserGuard } from './gaurds/user.guard';
 import { Contact } from './models/contact';
 
 const routes: Routes = [
   { path: '', redirectTo: 'contacts', pathMatch: 'full' },
-  { path: 'addcontact', component: AddcontactComponent },
+  { path: 'addcontact', component: AddcontactComponent, canActivate: [UserGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'contacts', component: ContactComponent },
-  { path: 'updatecontact/:id', component: UpdatecontactComponent }
+  { path: 'contacts', component: ContactComponent, canActivate: [UserGuard] },
+  { path: 'updatecontact/:id', component: UpdatecontactComponent, canActivate: [UserGuard] }
 ];
 
 @NgModule({
