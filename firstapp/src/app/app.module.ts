@@ -17,6 +17,8 @@ import { ContactService } from './services/contact.service';
 import { MoviesComponent } from './components/movies/movies.component';
 import { UserComponent } from './components/user/user.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     ContactsComponent,
     MoviesComponent,
     UserComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
