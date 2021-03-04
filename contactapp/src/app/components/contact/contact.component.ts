@@ -27,4 +27,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  checkToken(){
+    this.service.tokenExists();
+  }
+
 }
